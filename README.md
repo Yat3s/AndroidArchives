@@ -29,17 +29,15 @@ org.gradle.daemon=true**。
 -XX:+UseCompressedOops**
 
 **Refer to**:   
-1.[blog >> making-gradle-builds-faster](http://zeroturnaround.com/rebellabs/making-gradle-builds-faster/)  
-2.[stackoverflow >> building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips](http://stackoverflow.com/questions/16775197/building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips/17286002#17286002)
+> 1.[Blog >> making-gradle-builds-faster](http://zeroturnaround.com/rebellabs/making-gradle-builds-faster/)  
+> 2.[StackOverFlow >> building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips](http://stackoverflow.com/questions/16775197/building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips/17286002#17286002)
 
 
 
-
-
-**2.**
 
 ----
 ## Dialog
 
-**1. 如何设置Dialog的背景为透明?**`dialog` `dialog透明` `背景透明`  
-- 重写dialog，然后调用执行**getWindow().setBackgroundDrawableResource(R.color.transparent)**
+**1. 如何设置Dialog/DialogFragment的背景为透明?**`dialog` `dialog透明` `背景透明`  
+- 重写dialog，然后调用执行**getWindow().setBackgroundDrawableResource(R.color.transparent);**
+- 如果是DialogFragment，则为在onCreatView中**getDialog().getWindow().setBackgroundDrawableResource(R.color.transparent);**
