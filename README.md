@@ -50,7 +50,8 @@ productFlavors {
    }
    channel_baidu {}
    channel_beta {}
-}```  
+}
+```  
 - 美团的多渠道打包方案参考[Refer 2](http://tech.meituan.com/mt-apk-packaging.html)
 
 **Refer to**:   
