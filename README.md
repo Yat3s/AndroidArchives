@@ -33,7 +33,30 @@ org.gradle.daemon=true**。
 > 2.[StackOverFlow >> building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips](http://stackoverflow.com/questions/16775197/building-and-running-app-via-gradle-and-android-studio-is-slower-than-via-eclips/17286002#17286002)
 
 
+----
 
+**2.如何用Gradle多渠道打包** `多渠道打包` `Gradle渠道`   
+- 在Gradle中配置productFlavors，更多参考[Refer1](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Product-flavors)
+
+```
+productFlavors {
+   channel_360 {
+     applicationId "com.example.flavor1"
+           versionCode 20
+   }
+   channel_yingyongbao {
+     applicationId "com.example.flavor2"
+     minSdkVersion 14
+   }
+   channel_baidu {}
+   channel_beta {}
+}```
+
+- 美团的多渠道打包方案参考[Refer 2](http://tech.meituan.com/mt-apk-packaging.html)
+
+**Refer to**:   
+>1.http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Product-flavors  
+2.http://tech.meituan.com/mt-apk-packaging.html
 
 ----
 ## Dialog
@@ -41,3 +64,5 @@ org.gradle.daemon=true**。
 **1. 如何设置Dialog/DialogFragment的背景为透明?**`dialog` `dialog透明` `背景透明`  
 - 重写dialog，然后调用执行**getWindow().setBackgroundDrawableResource(R.color.transparent);**
 - 如果是DialogFragment，则为在onCreatView中**getDialog().getWindow().setBackgroundDrawableResource(R.color.transparent);**
+
+----
