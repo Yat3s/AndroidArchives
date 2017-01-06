@@ -65,4 +65,6 @@ productFlavors {
 - 重写dialog，然后调用执行**getWindow().setBackgroundDrawableResource(R.color.transparent);**
 - 如果是DialogFragment，则为在onCreatView中**getDialog().getWindow().setBackgroundDrawableResource(R.color.transparent);**
 
+**2. Dialog的背景该怎么变成圆角?**`dialog` `dialog背景圆角` `dialog圆角`  
+- 首先需要把Dialog设置成为透明背景，注意可能需要去掉Dialog的标题栏
 ----
